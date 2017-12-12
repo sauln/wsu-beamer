@@ -1,0 +1,158 @@
+% ----- Nathaniel Saul built this template. LaTeX can be hard, so I hope others don't have to struggle with figuring out all the color crud.
+% ----- If you use this, please let me know how it worked and submit any changes you have made so others can benefit.
+
+\documentclass{beamer}
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage[english]{babel}
+
+\usetheme{Berkeley}
+\usecolortheme{beaver}
+
+% store images in images directory
+\graphicspath{ {images/} }
+
+\newcommand{\R}{\mathbb{R}}
+
+% -------- Nice footnotes without numbering
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+
+% --------- WSU colors and graphics
+\logo{\includegraphics[height=1.4cm]{wsu-emblem}}
+\definecolor{darkred}{HTML}{990000}
+\setbeamercolor{section in sidebar}{fg=black}
+\setbeamercolor{title in sidebar}{fg=black}
+\setbeamercolor{author in sidebar}{fg=black}
+\setbeamercolor{block body}{bg=darkred!20}
+\setbeamercolor{block title}{bg=darkred!80}
+\setbeamercolor{block body example}{bg=darkred!20}
+\setbeamercolor{block title example}{bg=darkred!80}
+\setbeamercolor{block body alerted}{bg=darkred!20}
+\setbeamercolor{block title alerted}{bg=darkred!80}
+\setbeamercolor{item}{fg=darkred}
+
+
+% --------- Begin Section title slides
+% ----------- Remove this if you don't want section title slides
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsection\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% --------- End Section title slides
+
+\title[Short Title]{A Long Title for your presentation \\ {\small Maybe with a subtitle}}
+\author[Dr. Name]{Dr. With Very Long Name, PhD, JD, NBA}
+\institute[WSU]{Washington State University}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+ \maketitle
+\end{frame}
+%
+% \begin{frame}
+% \tableofcontents
+% \end{frame}
+
+
+% ---- START --- Do not remove this
+% \addtobeamertemplate{frametitle}{}{%
+% \begin{tikzpicture}[remember picture,overlay]
+% \node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.8cm]{wsu-logo}};
+% \end{tikzpicture}}
+% ---- END --- Do not remove this
+\section[Short Section]{A section title that is too long to fit in side bar}
+
+\subsection{Subsection}
+
+
+\begin{frame}{A frame with lists}
+ \begin{enumerate}
+  \item Item 1
+  \item and another
+ \end{enumerate}
+\end{frame}
+
+
+\section{Some cool features}
+
+\begin{frame}{Footnotes}
+
+ \blfootnote{\tiny Example of footnote without numbering}
+\end{frame}
+
+\begin{frame}{Definition Boxes}
+ Are there other features you would like?
+
+ \begin{definition}[Concept]
+  Even the definition boxes have nice cougar colors
+ \end{definition}
+
+ \begin{example}[Cool stuff]
+  Even the definition boxes have nice cougar colors
+ \end{example}
+
+\end{frame}
+
+\subsection{Another subsection}
+
+\begin{frame}{A frame with columns}
+
+ \begin{columns}
+  \begin{column}{0.5\textwidth}
+   \begin{center}
+    \includegraphics[width=1\textwidth]{wsu-emblem}
+   \end{center}
+  \end{column}
+
+  \begin{column}{0.45\textwidth}  %%<--- here
+   \begin{enumerate}
+    \item Include an image in one column
+    \item And have text in another column
+   \end{enumerate}
+  \end{column}
+ \end{columns}
+
+\end{frame}
+
+
+\section{Conclusion}
+\begin{frame}{}
+ \begin{center}
+  {\huge  Thank you!}  \\
+  \vspace{2cm}
+  This template can be found at
+  \url{https://github.com/sauln/wsu-beamer}\\
+  Please submit any changes you have made to this repository.
+  \vspace{0.5cm}
+
+  {\tiny  email: \href{mailto:nat@saulgill.com}{\nolinkurl{nat@saulgill.com} }
+
+   github: \url{https://github.com/sauln}
+
+   twitter: \url{https://twitter.com/_ropthe_}
+
+  }
+  \mbox{}
+ \end{center}
+\end{frame}
+
+
+
+\end{document}
